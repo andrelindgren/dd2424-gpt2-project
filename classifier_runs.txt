@@ -1,0 +1,15 @@
+
+SST, linear head only.
+uv run python classifier.py --dataset sst --fine-tune-mode last-linear-layer --use_gpu --epochs 10 --batch_size 8 --lr 1e-3 --run_name sst-last-linear
+
+SST, full model.
+uv run python classifier.py --dataset sst --fine-tune-mode full-model --use_gpu --epochs 10 --batch_size 8 --lr 1e-5 --run_name sst-full-model
+
+CFIMDB, linear head only.
+uv run python classifier.py --dataset cfimdb --fine-tune-mode last-linear-layer --use_gpu --epochs 10 --batch_size 8 --lr 1e-3 --run_name cfimdb-last-linear
+
+CFIMDB, full model
+uv run python classifier.py --dataset cfimdb --fine-tune-mode full-model --use_gpu --epochs 10 --batch_size 2 --lr 1e-5 --run_name cfimdb-full-model
+
+
+

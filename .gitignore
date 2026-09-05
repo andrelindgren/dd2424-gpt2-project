@@ -1,0 +1,17 @@
+*pretest
+*~
+*.pyc
+*.pt
+*.pkl
+.idea/
+out/
+
+.venv/
+.idea/
+wandb/
+__pycache__/
+*.zip
+predictions/*.csv
+predictions/*.txt
+
+colab.local.ipynb

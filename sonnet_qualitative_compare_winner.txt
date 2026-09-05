@@ -1,0 +1,108 @@
+1. Good (style, not content) — Pair 2, Sonnet 134
+
+Gold
+134
+So, now I have confessed that he is thine
+And I myself am mortgaged to thy will,
+Myself I'll forfeit, so that other mine
+
+Thou wilt restore to be my comfort still.
+But thou wilt not, nor he will not be free,
+For thou art covetous, and he is kind;
+He learned but surety-like to write for me
+Under that bond that him as fast doth bind.
+The statute of thy beauty thou wilt take,
+Thou usurer that put'st forth all to use,
+And sue a friend came debtor for my sake;
+So him I lose through my unkind abuse.
+  Him have I lost; thou hast both him and me.
+  He pays the whole, and yet am I not free.
+
+Generated
+2
+So, now I have confessed that he is thine
+And I myself am mortgaged to thy will,
+Myself I'll forfeit, so that other mine
+
+may be sold.
+For riches and things despised so very are not to me grown,
+Nor is thy desire so clear when it thronks.
+O, straight when thy thought doth resurvey,
+So I can say with true pride that he hath not thought such a thing
+As long as these sweet sweets are expired.
+Thine legacy is as my ransom when thou rebuked,
+And I with my husband make a copy.
+  Wilt thou sin so great and forfeit me thee,
+  So that I am better subsisting by toil,
+  Than by paying thee even so much for
+
+
+Generated tail: "sold", "riches", "ransom", "legacy", "forfeit me thee", "paying thee", "Wilt thou sin so great"
+
+Elizabethan morphology (wilt, thou, thine, doth, rebuked),
+
+Shakespeare's sonnets are fourteen-line poems that typically feature decasyllabic lines, meaning each line has ten syllables
+roughly decasyllabic lines,
+
+Uses the gold's financial/legal vocabulary
+Character n-grams such as:
+    thou , thee, wilt, -est.
+
+
+#########################################################################################################################################################################################################
+
+
+2. Bad (content) — Pair 3, Sonnet 135
+
+Gold
+135
+Whoever hath her wish, thou hast thy will,
+And will to boot, and will in overplus.
+More than enough am I that vex thee still,
+
+To thy sweet will making addition thus.
+Wilt thou, whose will is large and spacious,
+Not once vouchsafe to hide my will in thine?
+Shall will in others seem right gracious,
+And in my will no fair acceptance shine?
+The sea, all water, yet receives rain still,
+And in abundance addeth to his store;
+So thou, being rich in will, add to thy will
+One will of mine to make thy large will more.
+  Let no unkind, no fair beseechers kill.
+  Think all but one, and me in that one will.
+
+
+Generated
+3
+Whoever hath her wish, thou hast thy will,
+And will to boot, and will in overplus.
+More than enough am I that vex thee still,
+
+As some have in wealth purpose to show,
+Against whom the sovereign may issue to pay.
+But you, like me, know not what place in the state thee are.
+Thy fee alone wilt yield thy other parts,
+And with their trust were a goddess's sin created.
+But mine will be thine when thou art nothing:
+Mine is thyself thy birth. Thy sight thou shalt dute mine eyes,
+And this first respect in thy hand.
+  So by thy granting, my charter constrain'st
+  To depart all too early with all day onset.
+
+
+
+It's a Will pun, "will" appears in nearly every line, ending on my name is Will.
+
+Generated tail:
+"wealth", "sovereign", "state", "fee", "goddess's sin", "charter", "onset"
+No sign of will.
+
+The 3 line seed hands the model the keyword three times in three lines.
+Continuing it requires no content understanding at all, just including the word will would be enough. But it doesn't.
+It falls back into the same generic money/law vocabulary it used in example 1
+That vocabulary is global, not conditioned on this particular prompt.
+
+The model learned what a sonnet sounds like (vocabulary, morphology, line shape), which is enough to match the wrong-tail baseline of 41.84.
+
+It learned nothing about what the specific seed is about, which is why its stuck at 42.09.

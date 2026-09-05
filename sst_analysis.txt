@@ -1,0 +1,30 @@
+=== sst ===
+arm       runs    best        lr    steps    s/run  mem GB
+head        20  0.4687   1.0e-03     5340      3.4    0.05
+head_ext    99  0.4886   3.8e-04    85440     26.7    0.05
+top2         3  0.4977   1.0e-04     5340    193.1    0.73
+top4         3  0.4977   1.0e-04     5340    246.5    0.92
+top8         3  0.5104   3.0e-05     5340    356.6    1.29
+full        11  0.5195   1.0e-05     5340    529.6    2.19
+
+matched-budget head search: 33 configs, 99 runs, 44.1 min
+  best config (seed mean): 0.4868 over 3 seeds, spread 0.0036
+  lr 3.78e-04, dropout 0.3, wd 0.01, epochs 80, best_epoch 69
+
+Seed spread for best models
+head: 5 seeds, dev acc 0.4583 +/- 0.0070 (std)
+full: 3 seeds, dev acc 0.5056 +/- 0.0154 (std)
+
+dev n=1101: two runs differing by less than 0.042 can be considered equal
+wrote results/anytime_sst.png
+
+=== cfimdb ===
+arm       runs    best        lr    steps    s/run  mem GB
+head         6  0.8449   3.0e-03     4270      2.9    0.02
+full         4  0.9837   1.0e-05     4270    603.6    2.83
+Seed spread for best models
+full: 3 seeds, dev acc 0.9755 +/- 0.0041 (std)
+
+dev n=245: two runs differing by less than 0.022 can be considered equal
+
+Process finished with exit code 0

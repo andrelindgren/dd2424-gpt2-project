@@ -1,0 +1,46 @@
+uv run python sonnet_evaluation.py
+
+######################################################################################
+
+  parser = argparse.ArgumentParser()
+
+  parser.add_argument("--sonnet_path", type=str, default="data/sonnets.txt")
+  parser.add_argument("--held_out_sonnet_path", type=str, default="data/sonnets_held_out.txt")
+  parser.add_argument("--sonnet_out", type=str, default="predictions/generated_sonnets.txt")
+
+  parser.add_argument("--seed", type=int, default=11711)
+  parser.add_argument("--epochs", type=int, default=10)
+  parser.add_argument("--use_gpu", action='store_true')
+
+  # Generation parameters.
+  parser.add_argument("--temperature", type=float, help="softmax temperature.", default=1.2)
+  parser.add_argument("--top_p", type=float, help="Cumulative probability distribution for nucleus sampling.",
+                      default=0.9)
+
+  parser.add_argument("--batch_size", help='The training batch size.', type=int, default=8)
+  parser.add_argument("--lr", type=float, help="learning rate", default=1e-5)
+  parser.add_argument("--model_size", type=str, help="The model size as specified on hugging face.",
+                      choices=['gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'], default='gpt2')
+
+######################################################################################
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_1.txt --epochs 5 --batch_size 4 --lr 1e-5 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output1.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_2.txt --epochs 5 --batch_size 4 --lr 3e-5 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output2.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_3.txt --epochs 5 --batch_size 4 --lr 1e-4 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output3.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_4.txt --epochs 5 --batch_size 4 --lr 3e-4 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output4.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_5.txt --epochs 5 --batch_size 4 --lr 1e-3 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output5.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_6.txt --epochs 5 --batch_size 4 --lr 3e-3 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output6.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_7.txt --epochs 5 --batch_size 4 --lr 3e-6 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output7.txt
+
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_8.txt --epochs 10 --batch_size 4 --lr 1e-3 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output8.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_9.txt --epochs 10 --batch_size 4 --lr 1e-4 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output9.txt
+
+PYTHONIOENCODING=utf-8 uv run python sonnet_generation.py --sonnet_out predictions/generated_sonnets_10.txt --epochs 10 --batch_size 4 --lr 3e-4 --temperature 1.2 --top_p 0.9 --held_out_sonnet_path data/sonnets_held_out_dev.txt --use_gpu | tee sonnet_training_logs/output10.txt
